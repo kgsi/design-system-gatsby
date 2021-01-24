@@ -1,0 +1,85 @@
+---
+title: "Button"
+author: "mathmathniconico"
+date: "2019-07-16"
+---
+
+Button コンポーネントは、ユーザーが情報の保存や検索などのアクションを実行できるようにします。
+
+---
+
+## ラベルの書き方
+
+ラベルは、そのボタンが担うアクションを体言止めで書きます。
+たとえば、
+
+- ユーザーが入力したフォームを「送信」
+- タスクやオブジェクトを「追加」
+- 次のプロセスに進む「次へ」
+
+「別の情報を追加」など、多くの情報を含める必要がある場合には「を」で接続します。
+
+- 「権限を追加」
+- 「申請を取り消し」
+
+## 種類
+
+import { PrimaryButton, PrimaryButtonAnchor } from "smarthr-ui"
+import { SecondaryButton, SecondaryButtonAnchor } from "smarthr-ui"
+import { DangerButton, DangerButtonAnchor } from "smarthr-ui"
+import { SkeletonButton, SkeletonButtonAnchor } from "smarthr-ui"
+import { TextButton, TextButtonAnchor } from "smarthr-ui"
+
+<PrimaryButton>Button</PrimaryButton>
+<PrimaryButtonAnchor href="#">Anchor</PrimaryButtonAnchor>
+
+<SecondaryButton>Button</SecondaryButton>
+<SecondaryButtonAnchor href="#">Anchor</SecondaryButtonAnchor>
+
+<DangerButton>Button</DangerButton>
+<DangerButtonAnchor href="#">Anchor</DangerButtonAnchor>
+
+<SkeletonButton>Button</SkeletonButton>
+<SkeletonButtonAnchor href="#">Anchor</SkeletonButtonAnchor>
+
+<TextButton>Button</TextButton>
+<TextButtonAnchor href="#">Anchor</TextButtonAnchor>
+
+```js live=true
+import { PrimaryButton, PrimaryButtonAnchor } from 'smarthr-ui'
+import { SecondaryButton, SecondaryButtonAnchor } from 'smarthr-ui'
+import { DangerButton, DangerButtonAnchor } from 'smarthr-ui'
+import { SkeletonButton, SkeletonButtonAnchor } from 'smarthr-ui'
+import { TextButton, TextButtonAnchor } from 'smarthr-ui'
+
+<PrimaryButton>Button</PrimaryButton>
+<PrimaryButtonAnchor href="#">Anchor</PrimaryButtonAnchor>
+
+<SecondaryButton>Button</SecondaryButton>
+<SecondaryButtonAnchor href="#">Anchor</SecondaryButtonAnchor>
+
+<DangerButton>Button</DangerButton>
+<DangerButtonAnchor href="#">Anchor</DangerButtonAnchor>
+
+<SkeletonButton>Button</SkeletonButton>
+<SkeletonButtonAnchor href="#">Anchor</SkeletonButtonAnchor>
+
+<TextButton>Button</TextButton>
+<TextButtonAnchor href="#">Anchor</TextButtonAnchor>
+```
+
+## 補足
+
+### アイコン付きボタン
+
+ボタンがもつ機能を表すアイコンをつけるとユーザーの認知を助けるかもしれません。
+ただし、プルダウンなど別の機能を持つ場合には機能を表すアイコンを消しましょう。
+
+### type="button" について
+
+SmartHR UI の Button には意図しない submit を防ぐために、type="button" がついています。
+そのため、form submit を使いたい場合は、必ず type="submit" を明記してください。
+
+### 参考文献
+
+- https://design-system.service.gov.uk/components/button/

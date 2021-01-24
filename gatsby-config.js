@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Design System`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -13,8 +13,27 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      // Add support for *.mdx files in Gatsby
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`],
+        defaultLayouts: {
+          default: require.resolve(`./src/components/article-page-layout.js`),
+        },
+      },
+    },
+    {
+      // Add a collection called "components" that looks for files in "content/components"
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `components`,
+        path: `${__dirname}/contents/components`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
