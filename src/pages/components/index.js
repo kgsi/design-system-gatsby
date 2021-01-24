@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../../components/layout"
 
-// 参考: https://kakioku.com/2011180/
 const BlogList = ({ data }) => {
   const posts = data.allMdx.edges
 
