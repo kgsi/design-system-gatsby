@@ -1,0 +1,10 @@
+diff --git a/node_modules/smarthr-ui/esm/libs/ua.js b/node_modules/smarthr-ui/esm/libs/ua.js
+index adcf121..7f7919c 100644
+--- a/node_modules/smarthr-ui/esm/libs/ua.js
++++ b/node_modules/smarthr-ui/esm/libs/ua.js
+@@ -1,4 +1,4 @@
+-var ua = window.navigator.userAgent.toLowerCase();
++var ua = typeof window !== `undefined` ? window.navigator.userAgent.toLowerCase() : ''
+ export var isIe = ua.indexOf('msie') !== -1 || ua.indexOf('trident') !== -1;
+ export var isSp = (ua.indexOf('windows') !== -1 && ua.indexOf('phone') !== -1) ||
+     (ua.indexOf('android') !== -1 && ua.indexOf('mobile') !== -1) ||
