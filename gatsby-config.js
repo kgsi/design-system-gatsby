@@ -20,7 +20,7 @@ module.exports = {
       // Add support for *.mdx files in Gatsby
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.mdx`],
+        extensions: [`.mdx`, `.md`],
         defaultLayouts: {
           default: require.resolve(`./src/components/article-page-layout.js`),
         },
